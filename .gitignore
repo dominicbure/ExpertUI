@@ -1,0 +1,6 @@
+#.gitignore
+/_project/*
+/nbproject/*
+/upload/*
+upload.php
+/app/core/config.js
