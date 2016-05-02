@@ -124,16 +124,16 @@ angApp.config(['$routeProvider',
                 }).
                 // Alliance demo
                 when('/alliance/spectrum', {
-                    templateUrl: 'app/alliance/spectrum.html'
+                    templateUrl: 'app/views/alliance/spectrum.html'
                 }).
                 when('/alliance/zniffer', {
-                    templateUrl: 'app/alliance/zniffer.html'
+                    templateUrl: 'app/views/alliance/zniffer.html'
                 }).
                 when('/alliance/health', {
-                    templateUrl: 'app/alliance/health.html'
+                    templateUrl: 'app/views/alliance/health.html'
                 }).
                 when('/alliance/map', {
-                    templateUrl: 'app/alliance/map.html'
+                    templateUrl: 'app/views/app/alliance/map.html'
                 }).
                 otherwise({
                     redirectTo: '/'
