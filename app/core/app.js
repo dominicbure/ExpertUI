@@ -16,7 +16,7 @@ var angApp = angular.module('angApp', [
 
 //Define Routing for app
 angApp.config(['$routeProvider',
-    function($routeProvider) {
+    function ($routeProvider) {
         $routeProvider.
                 // Home
                 when('/', {
@@ -122,6 +122,19 @@ angApp.config(['$routeProvider',
                 when('/error/:code?', {
                     templateUrl: 'app/views/error.html'
                 }).
+                // Alliance demo
+                when('/alliance/spectrum', {
+                    templateUrl: 'app/alliance/spectrum.html'
+                }).
+                when('/alliance/zniffer', {
+                    templateUrl: 'app/alliance/zniffer.html'
+                }).
+                when('/alliance/health', {
+                    templateUrl: 'app/alliance/health.html'
+                }).
+                when('/alliance/map', {
+                    templateUrl: 'app/alliance/map.html'
+                }).
                 otherwise({
                     redirectTo: '/'
                 });
@@ -140,7 +153,7 @@ angApp.run(function run($cookies) {
             store_url: '/ZWave.' + config_data.cfg.dongle + '/Run/',
             restore_url: '/ZWave.' + config_data.cfg.dongle + '/Restore',
             queue_url: '/ZWave.' + config_data.cfg.dongle + '/InspectQueue',
-             fw_update_url: '/ZWave.' + config_data.cfg.dongle + '/FirmwareUpdate',
+            fw_update_url: '/ZWave.' + config_data.cfg.dongle + '/FirmwareUpdate',
             stat_url: '/ZWave.' + config_data.cfg.dongle + '/CommunicationStatistics',
             license_load_url: '/ZWave.' + config_data.cfg.dongle + '/ZMELicense',
             zddx_create_url: '/ZWave.' + config_data.cfg.dongle + '/CreateZDDX/'
@@ -149,6 +162,6 @@ angApp.run(function run($cookies) {
     }
 });
 
-angular.forEach(config_data, function(key, value) {
+angular.forEach(config_data, function (key, value) {
     config_module.constant(value, key);
 });
